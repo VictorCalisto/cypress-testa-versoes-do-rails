@@ -20,7 +20,7 @@ describe('troca de pagina', () => {
     for(let i=0;i<20;i++){
       cy.log(`${i+1} iteração`)
       cy.get('[href="/pages/page2"]').click()
-      cy.get('h1').should('include.text', '2') // esse nao da certo
+      cy.get('h1').should('include.text', '2') // esse da certo
       cy.get('[href="/pages/page1"]').click()
     }
     cy.get('h1').should('include.text', '1');
